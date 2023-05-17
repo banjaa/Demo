@@ -20,8 +20,11 @@
 .classinformationmm{
     font-size: 13px;
     margin-right: 5%;
-    width: 20%;
+    width: 45%;
+    display: flex;
+    justify-content: end;
 }
+
 .numbermm{
     width: 12%;
     height: 50%;

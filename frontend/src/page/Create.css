@@ -1,3 +1,4 @@
+
 .Back{
     width: 100vw;
     height: 100vh;
@@ -6,3 +7,75 @@
     justify-content: center;
     align-items: center;
 }
+.cont{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.question{
+    font-size: 50px;
+    margin-top: 14%;
+    color: #112a16;
+}
+.createbox{
+    border: rgb(255, 255, 255) 1px solid;
+    width: 400px;
+    height: 100px;
+    margin-top: 30%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(240, 240, 240);
+    font-size: 30px;
+    color: rgb(87, 228, 87);
+    padding-top: 16%;
+    font-weight: 300;
+}
+.holderimg{
+    width: 50vh;
+    height: 5vh;
+    font-size: 2vh;
+    padding-left: 2vh;
+    background-color: #44e064;
+    color: white;
+    border-radius: 8px;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: rgba(23, 78, 130, 0.15)dashed 2px;
+    width: 600px;
+    height: 260px;
+    border-radius: 6px;
+}
+.insideuy{
+    font-size: 2vh;
+    color: #807770;
+}
+
+.CreateProject{
+    width: 60vh;
+    height: 80vh;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .upload-btn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    width: 10rem;
+    height: 50px;
+    color: white;
+    background-color: green;
+} */

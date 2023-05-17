@@ -11,6 +11,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 .fillednavbar-top{
     height: 7.5vh;
     width: 100%;
@@ -21,17 +22,19 @@
     background-color: #67eb7f;
     border-bottom-left-radius: 5px;
 }
+
 .menu-slide{
     flex-direction: column;
-    width: 40vw;
+    width: 50vw;
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     display: none;
     background-color: #67eb7f;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 .navbar{
     height: 7.5vh;
     width: 100%;
@@ -42,18 +45,19 @@
     flex-direction: column;
     align-items: end;
 }
+
 .fillednavbar{
-    height: 100%;
     width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: end;
-    background: rgba(3, 3, 3, 0.639); 
-    backdrop-filter: blur;
+    backdrop-filter: blur(3px);
 }
+
 .left{
     background-image: url(../img/Framenew.png);
     margin-left: 5%;
@@ -61,6 +65,7 @@
     height: 60px;
     background-size: cover;
 }
+
 .right{
     width: 15%;
     display: flex;
@@ -69,20 +74,23 @@
     align-items: baseline;
     margin-right: 2%;
 }
+
 .input{
     width: 50%;
     height: 30px;
 }
+
 .navbartext{
     font-size: 18px;
     font-weight: bold;
-    color: black;
+    color: white;
     border: none;
     text-decoration: underline;
     text-decoration-line: none;
     font-family: Roboto ;
     font-weight: 500;
 }
+
 .menutext{
     font-size: 2vh;
     font-weight: bold;
@@ -94,6 +102,7 @@
     font-weight: 500;
     color: black;
 }
+
 .outer-text{
     border: 0 solid black;
     width: 100%;
@@ -103,20 +112,43 @@
     justify-content: center;
     align-items: center;
 }
+
 .menu{
-    background-image: url(../../public/menu.svg);
-    width: 40.5px;
-    height: 31px;
+    background-image: url(../../public/list.png);
+    width: 30px;
+    height: 30px;
     background-size: cover;
     display: none;
     margin-right: 2%;
 }
+
 .link {
     text-decoration: none;
 }
+
 .none{
     display: none;
 }
+
+@media screen and (max-width: 1900px) {
+    .right {
+        width: 18%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .right {
+        width: 23%;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .right {
+        width: 28%;
+    }
+}
+
 
 @media screen and (max-width: 1450px) {
     .left {
@@ -165,6 +197,7 @@
         height: 50px;
     }
 }
+
 @media screen and (max-width: 700px) {
     .navbartext{
         display: none;
@@ -183,4 +216,3 @@
         height: 35%;
     }
 }
-

@@ -8,9 +8,9 @@
     top: 0px;
 }
 *{
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
   section{
     position: relative;
     width: 100%;
@@ -97,8 +97,8 @@
     background-size:cover;
     background-repeat: no-repeat;
 }
-.Middler {
-    width: 1400px;
+.Middle {
+    width: 55%;
     margin-bottom: 5%;
 }
 
@@ -106,19 +106,9 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.scroll_box {
-  width: 100%;
-  display: flex;
-  overflow-x: scroll;
-}
-
-.scroll_box::-webkit-scrollbar {
-  display: none;
 }
 
 .Button {
@@ -143,20 +133,11 @@
   animation-duration: 1s;
 }
 
-
-
 .Box2 {
   width: 100%;
   position: relative;
   animation-name: ani2;
   animation-duration: 1.5s;
-}
-
-.title {
-  font-size: 350%;
-  margin-top: 5%;
-  color: white;
-  font-weight: 400;
 }
 
 @keyframes ani1{
@@ -167,7 +148,6 @@
 .ani {
   animation-name: anima;
   animation-duration: 5s;
-  font-size: 150%;
 }
 
 @keyframes anima{
@@ -178,126 +158,4 @@
 @keyframes ani2{
   0% {top: 700px; visibility: hidden; opacity: 0;}
   100% {top: 0px; visibility: visible; opacity: 1;}
-}
-
-@media screen and (max-width: 1900px) {
-  .title {
-    font-size: 320%;
-    margin-top: 7%;
-  }
-}
-
-@media screen and (max-width: 1450px) {
-  .Button {
-    width: 11%;
-    height: 45px;
-  }
-  .title {
-    margin-top: 8%;
-    font-size: 300%;
-  }
-  .Middler {
-    width: 1200px;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .Middler {
-    width: 990px;
-  }
-  .Button {
-    width: 14%;
-    height: 60px;
-  }
-  .title {
-    margin-top: 12%;
-    font-size: 250%;
-  }
-}
-
-@media screen and (max-width: 1040px) {
-  .Middler {
-    width: 760px;
-  }
-  .Button {
-    width: 16%;
-    height: 40px;
-  }
-  .title {
-    margin-top: 16%;
-    font-size: 240%;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .Middler {
-    width: 580px;
-  }
-  .Button {
-    width: 18%;
-  }
-  .title {
-    margin-top: 20%;
-    font-size: 210%;
-  }
-}
-
-@media screen and (max-width: 630px) {
-  .Middler {
-    width: 90%;
-  }
-  .title {
-    margin-top: 22%;
-    font-size: 190%;
-  }
-}
-
-@media screen and (max-width: 530px) {
-  .title {
-    margin-top: 27%;
-    font-size: 165%;
-  }
-  .Button {
-    width: 20%;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .Button {
-    width: 24%;
-  }
-  .title {
-    margin-top: 40%;
-    font-size: 140%;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .Button {
-    width: 30%;
-  }
-  .title {
-    margin-top: 50%;
-    font-size: 120%;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  .Button {
-    width: 35%;
-  }
-  .title {
-    margin-top: 55%;
-    font-size: 100%;
-  }
-}
-
-@media screen and (max-width: 240px) {
-  .Button {
-    width: 40%;
-  }
-  .title {
-    margin-top: 60%;
-    font-size: 80%;
-  }
 }

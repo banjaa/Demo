@@ -13,7 +13,7 @@ export const Home = () => {
                   <div class='air air3'></div>
                   <div class='air air4'></div>
                 </section>
-            <div className="Middle">
+            <div className="Middler">
                 <div style={{width:"100%"}}>
                     <h2 className="ani" style={{marginTop:"5%", marginBottom:"1%", color:"grey"}}>Trending</h2>
                 </div>

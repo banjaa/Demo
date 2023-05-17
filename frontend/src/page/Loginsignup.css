@@ -153,3 +153,17 @@ color: #112D48;
     border-radius: 10px;
     border: none;
 }
+
+.Back{
+    width: 100vh;
+    height: 100vh;
+    background: #e1e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75vh;
+    border-radius: 8px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}

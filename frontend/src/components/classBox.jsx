@@ -5,7 +5,7 @@ export const ClassBox = (width) => {
         <div style={{width:{width}}} className="classBox">
             <div className="miniBox">
                 <h2 className="title">Team</h2>
-                <h3 className="information">2 admin | 20 members | 24 projects</h3>
+                <h3 className="information">  20 members | 24 projects</h3>
             </div>
         </div>
     )
