@@ -1,0 +1,161 @@
+.Home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+  section{
+    position: relative;
+    width: 100%;
+    height: 380px;
+    background: #67eb7f;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+  }
+  section .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px;
+    
+  }
+  section .air.air1{
+    animation: wave 15s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: -5s;
+    bottom: 0;
+    color: black;
+  }
+  section .air.air2{
+    animation: wave2 5s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: 3s;
+    bottom: 10px;
+  }
+  section .air.air3{
+    animation: wave 10s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: 15s;
+    bottom: 15px;
+  }
+  section .air.air4{
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: 10s;
+    bottom: 20px;
+  }
+  @keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+  }
+.search {
+    width: 20%;
+    height: 10px;
+    font-size: 120%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.box {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../img/back.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.Middle {
+    width: 55%;
+    margin-bottom: 5%;
+}
+
+.Box1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Button {
+    width: 10%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(186, 251, 164);
+    border-radius: 5px;
+    border: 0;
+    margin-top: 3%;
+    transition-duration: 0.5s;
+}
+.Button:hover, .Button:active {width: 10.3%; height: 53px;}
+
+.Box {
+  animation-duration: 3s;
+  width: 100%;
+  position: relative;
+  animation-name: ani1;
+  animation-duration: 1s;
+}
+
+.Box2 {
+  width: 100%;
+  position: relative;
+  animation-name: ani2;
+  animation-duration: 1.5s;
+}
+
+@keyframes ani1{
+  0% {top: 700px; visibility: hidden; opacity: 0;}
+  100% {top: 0px; visibility: visible; opacity: 1;}
+}
+
+.ani {
+  animation-name: anima;
+  animation-duration: 5s;
+}
+
+@keyframes anima{
+  0% {visibility: hidden; opacity: 0;}
+  100% {visibility: visible; opacity: 1;}
+}
+
+@keyframes ani2{
+  0% {top: 700px; visibility: hidden; opacity: 0;}
+  100% {top: 0px; visibility: visible; opacity: 1;}
+}

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px grey;
+}
+
+.txt {
+    font-size: 120%;
+    color: #222222B2;
+    font-family: roboto;
+    font-weight: 600;
+}
+
+.scroll {
+    width: 310px;
+    transition-duration: 0.5s;
+}
+
+.Box {
+    width: 310px;
+    transition-duration: 0.5s;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.Box2 {
+    width: 445px;
+    transition-duration: 0.5s;
+    margin-top: 2%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+}
+
+.scroll:hover, .Box:active {width: 320px;}
+.Box2:hover, .Box2:active {width: 455px;}
+
+
+@media screen and (max-width: 1450px) {
+    .Box2 {
+        width: 380px;
+    }
+    .scroll {
+        width: 240px;
+    }
+    .Box {
+        width: 240px;
+    }
+    .txt {
+        font-size: 110%;
+    }
+    .scroll:hover, .Box:active {width: 250px;}
+    .Box2:hover, .Box2:active {width: 390px;}
+  }
+
+@media screen and (max-width: 1250px) {
+    .Box2 {
+        width: 310px;
+    }
+    .txt {
+        font-size: 100%;
+    }
+    .Box2:hover, .Box2:active {width: 320px;}
+}
+
+@media screen and (max-width: 1040px) {
+    .Box2 {
+        width: 365px;
+    }
+    .scroll {
+        width: 220px;
+    }
+    .Box {
+        width: 220;
+    }
+    .scroll:hover, .Box:active {width: 230px;}
+    .Box2:hover, .Box2:active {width: 375px;}
+}
+
+@media screen and (max-width: 810px) {
+    .Box2 {
+        width: 275px;
+    }
+    .txt {
+        font-size: 90%;
+    }
+    .scroll:hover, .Box:active {width: 230px;}
+    .Box2:hover, .Box2:active {width: 280px;}
+}
+
+@media screen and (max-width: 630px) {
+    .Box2 {
+        width: 100%;
+        margin-top: 5%;
+    }
+    .scroll {
+        width: 420px;
+    }
+    .Box {
+        width: 420px;
+        margin-right: 5%;
+    }
+    .txt {
+        font-size: 130%;
+    }
+    .scroll:hover, .Box:active {width: 430px;}
+    .Box2:hover, .Box2:active {width: 101%;}
+}
+
+@media screen and (max-width: 530px) {
+    .scroll {
+        width: 320px;
+    }
+    .Box {
+        width: 320px;
+        margin-right: 5%;
+    }
+    .txt {
+        font-size: 120%;
+    }
+    .scroll:hover, .Box:active {width: 330px;}
+}
+
+@media screen and (max-width: 430px) {
+    .scroll {
+        width: 260px;
+    }
+    .Box {
+        width: 260px;
+        margin-right: 5%;
+    }
+    .txt {
+        font-size: 110%;
+    }
+    .scroll:hover, .Box:active {width: 270px;}
+}
+
+@media screen and (max-width: 360px) {
+    .scroll {
+        width: 200px;
+    }
+    .Box {
+        width: 200px;
+        margin-right: 5%;
+    }
+    .txt {
+        font-size: 90%;
+    }
+    .scroll:hover, .Box:active {width: 210px;}
+}

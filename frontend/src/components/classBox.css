@@ -1,0 +1,30 @@
+.classBox {
+    background-color: rgb(245, 244, 244);
+    width: 450px;
+    height: 100px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.miniBox{
+    width: 85%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    margin: 0;
+    color: #67eb7f;
+    font-size: 230%;
+}
+
+.information {
+    font-weight: 300;
+    color: grey;
+}

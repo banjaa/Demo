@@ -1,0 +1,155 @@
+.SignupBackground{
+    width: 100vw;
+    height: 100vh;
+    background: #e1e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.full1{
+    width: 60vh;
+    height: 70vh;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.full2{
+    width: 60vh;
+    height: 50vh;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title1{
+font-style: normal;
+font-weight: 400;
+font-size: 3vh;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15008px;
+
+color: #112D48;
+}
+.title2{
+    margin: 3%;
+font-style: normal;
+font-weight: 400;
+font-size: 2vh;
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15008px;
+
+color: #829AB1;
+}
+.inpat{
+    width: 50vh;
+    height: 5vh;
+    font-size: 2vh;
+    padding-left: 2vh;
+    border: 1px solid rgba(23, 78, 130, 0.15);
+border-radius: 8px;
+}
+.fullinput{
+    margin: 2%;
+}
+.holder{
+    font-style: normal;
+font-weight: 500;
+font-size: 1.8vh;
+margin-bottom: 1%;
+display: flex;
+align-items: center;
+letter-spacing: 0.15008px;
+
+color: #112D48;
+
+}
+.button{
+    margin: 3%;
+    width: 52vh;
+    height: 4.5vh;
+    font-size: 1.75vh;
+    border-radius: 8px;
+    color: white;
+    background: #67eb7f;
+    border: 0;
+    cursor: pointer;
+}
+@media screen and (max-width:375px) {
+    .full1{
+        width: 50vh;
+    }
+    .full2{
+        width: 50vh;
+    }
+    .inpat{
+        width: 45vh;
+    }
+    .button{
+        width: 47.5vh;
+    }
+    .bottom{
+        font-size: 1.5vh;
+    }
+}
+@media screen and (max-width:390px) {
+    .full1{
+        width: 42.5vh;
+    }
+    .full2{
+        width: 42.5vh;
+    }
+    .inpat{
+        width: 37.5vh;
+    }
+    .button{
+        width: 40vh;
+    }
+}
+@media screen and (max-width:740px) {
+    .full1{
+        width: 50vh;
+    }
+    .full2{
+        width: 50vh;
+    }
+    .inpat{
+        width: 45vh;
+    }
+    .button{
+        width: 47.5vh;
+    }
+}
+@media screen and (max-width:500px) {
+    .full1{
+        width: 42.5vh;
+    }
+    .full2{
+        width: 42.5vh;
+    }
+    .inpat{
+        width: 37vh;
+    }
+    .button{
+        width: 39vh;
+    }
+}
+.backButton {
+    margin-top: 5%;
+    width: 30%;
+    height: 4vh;
+    color: white;
+    background-color: #67eb7f;
+    border-radius: 10px;
+    border: none;
+}
