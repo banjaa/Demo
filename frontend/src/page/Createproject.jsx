@@ -15,6 +15,8 @@ const [word, setWord] = useState("")
 const [url, setUrl] = useState("")
 const [imgUrl, setImgUrl] = useState("")
 const [selectedImages, setSelectedImages] = useState([]);
+const [err, setErr] = useState(false)
+const [wrong, setWrong] = useState("")
 const user_id = user_info._id
 
 const onSelectFile = (event) => {
@@ -39,7 +41,30 @@ function deleteHandler(image) {
 const dataRetriever = async () => {
     const img = selectedImages.toString()
     const img_url = img.slice(5)
-    await axios({
+    if(title.length <= 5 || title.length >= 15 || word.length <= 10 || word.length >= 50) {
+      if(title.length <= 5) {
+        setWrong("title is too short")
+        setErr(true)
+      }
+      if(title.length >= 15) {
+        setWrong("title length too long")
+        setErr(true)
+      }
+      if(word.length <= 10) {
+        setWrong("Description is too short")
+        setErr(true)
+      }
+      if(word.length >= 50) {
+        setWrong("Description is too long")
+        setErr(true)
+      }
+    } else {
+      setWrong("")
+      setErr(false)
+    }
+
+    if(wrong.length === 0) {
+      await axios({
       url: `https://fk-three.vercel.app/project`,
       method: "POST",
       data: {
@@ -51,14 +76,29 @@ const dataRetriever = async () => {
         url: url
       },
     }).then((response) => {
-        navigate("/")
+        const res = response.data;
+        if(res === "you're not member of this class") {
+          setWrong(res)
+          setErr(true)
+        } else if(res === "there is no such class like this") {
+          setWrong(res)
+          setErr(true)
+        } else {
+          localStorage.setItem("class_information", JSON.stringify(response.data));
+          navigate("/")
+        }
     });
+    }
+    
   }
 
     return <div className="Back" style={{width:"100vw",height:'100vh', display:"flex",justifyContent:'center',alignItems:"center"}}>
       <Navbar/>
         <div className="CreateProject">
             <div style={{margin:"5%"}} className="title1">Create project</div>
+            {err ? (
+              <h3 className="error">{wrong}</h3>
+            ) : null}
         <div className="fullinput">
           <div className="holder">Which class do you want to add project</div>
           <input onChange={(e) => setClassname(e.target.value)} id="classname"  className="inpat" type="text" placeholder="Enter your class name" />

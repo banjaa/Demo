@@ -6,6 +6,7 @@ import { useState } from "react";
 export const Navbar = () => {
     const looged = false;
     const user = localStorage.getItem("user_information");
+    const user_info = JSON.parse(user)
     const [isActive, setActive] = useState("false");
     const menu = () =>{
         setActive(!isActive); 
@@ -14,13 +15,17 @@ export const Navbar = () => {
     let second = "Signup"
     let first_link = "/login"
     let second_link = "/signup"
+    const setToProfile = () => {
+        if(user_info) {
+            localStorage.setItem("seeing_profile", JSON.stringify(user_info));
+        }
+    }
     if(user) {
         one = "Create"
         second = "Profile"
         first_link = "/create"
         second_link = "/profile"
     }
-    
     return(
         <div id="navbar1" className={isActive ? "navbar" : "fillednavbar"}>
     <div className={isActive ? "navbar-top" : "fillednavbar-top"}>
@@ -36,7 +41,7 @@ export const Navbar = () => {
             <Link className="link" to={first_link}>
                 <div className="navbartext">{one}</div>
             </Link>
-            <Link className="link" to={second_link}>
+            <Link onClick={setToProfile} className="link" to={second_link}>
                 <div className="navbartext">{second}</div>
             </Link>
         </div>

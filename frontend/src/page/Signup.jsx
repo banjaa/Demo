@@ -9,7 +9,7 @@ export const SignUp = () => {
 
   const checkUser = () => {
     const user = localStorage.getItem("user_information");
-    // if (user) navigate("/");
+    if (user) navigate("/");
   };
 
   useEffect(() => {
@@ -33,9 +33,9 @@ export const SignUp = () => {
           password: passValue,
         }
       }).then((response) => {
-        window.location.href = "/";
         localStorage.setItem("user_information", response);
         sessionStorage.setItem("use_information", JSON.stringify(response));
+        navigate("/")
       });
   };
 }

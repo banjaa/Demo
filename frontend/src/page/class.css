@@ -1,3 +1,57 @@
+/* .class {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.Middle {
+    width: 75%;
+    margin-top: 7.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Boxs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ani {
+    animation-name: anima;
+    animation-duration: 5s;
+    font-size: 150%;
+  }
+  
+  @keyframes anima{
+    0% {visibility: hidden; opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+}
+
+.classBox {
+    animation-duration: 3s;
+    width: 100%;
+    position: relative;
+    animation-name: ani1;
+    animation-duration: 1s;
+}
+
+@keyframes ani1{
+    0% {top: 700px; visibility: hidden; opacity: 0;}
+    100% {top: 0px; visibility: visible; opacity: 1;}
+}
+@media screen and (max-width: 1265px) {
+    .middle{
+        width: 50%;
+    }
+} */
 .class {
     width: 100%;
     height: 100vh;
@@ -35,40 +89,147 @@
     100% {visibility: visible; opacity: 1;}
 }
 
+.classBox {
+    animation-duration: 3s;
+    width: 100%;
+    position: relative;
+    animation-name: ani1;
+    animation-duration: 1s;
+}
 
 @keyframes ani1{
     0% {top: 700px; visibility: hidden; opacity: 0;}
     100% {top: 0px; visibility: visible; opacity: 1;}
 }
 
-.classBox {
-    background-color: rgb(245, 244, 244);
-    width: 420px;
-    height: 100px;
-    border-radius: 25px;
+
+
+
+/* HomeProjectBox */
+.ProjectBoxs{
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 8px;
 }
-
-.miniBox{
-    width: 85%;
-    height: 70%;
+.flexit{
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    margin-top: 5%;
+}
+.rightsidehome{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 5%;
-}
-
-.title {
-    margin: 0;
-    color: #67eb7f;
-    font-size: 230%;
-}
-
-.information {
-    font-weight: 300;
-    color: grey;
-}
+    width: 450px;
+    height: 450px;
+    background-color: #292B2F;;
+    border-radius: 15px;
+    margin-top: 2%;
+    margin-left: 4%;
+  }
+  .upgreenho{
+    width: 100%;
+    height: 38%;
+    background-color: #67eb7f;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  .downwhite{
+    width: 98%;
+    background-color: white;
+    margin-bottom: 3%;
+    border-radius: 15px;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+  }
+  .theirname{
+    color: #292B2F;
+    font-size: 30px;
+    margin-left: 4%;
+    margin-top: 2%;
+  }
+  .line{
+    border-bottom: 2px solid rgb(91, 197, 140);
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  .description{
+    width: 90%;
+    margin-left: 4%;
+    color: #292B2F;
+    font-size: 15px;
+    margin-top: 4%;
+  }
+  .whiteho{
+    font-size: 30px;
+    color: white;
+    margin-left: 5%;
+    margin-top: 28%;
+  }
+  .projectboximg{
+    width:70%;
+    height: 106%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: #f1ffeb 1px solid;
+    border-radius: 5px;
+    border-style: ridge;
+    margin-top: 0.5%;
+  }
+  .star{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+  }
+  .starrate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 150%;
+    margin-left: 5%;
+    justify-content: space-between;
+    width: 15%;
+  }
+  .rate{
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-left: 5%;
+  }
+  .myprojectsho{
+    font-size: 30px;
+  font-weight: bold;
+  margin-top: 15%;
+  color: #292B2F;
+  }
+  .theirprojectsho{
+    display: flex;
+  flex-direction: row;
+  margin-top: 7%;
+  }
+  .Urlbox{
+    width:100%;
+    height:21%;
+    border: 1px solid #56d670;
+    margin-top: 2%;
+    margin-left: 4%;
+    border-radius: 10px;
+  }
+  .hd{
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-bottom: 5%;
+  }
+  .href{
+    text-decoration: none;
+    color: #56d670;
+    margin-left: 37%;
+  }

@@ -9,6 +9,7 @@ import {CreateClass} from "./page/CreateClass"
 import { Classinformation } from "./page/Classinformation.jsx";
 import {CreateProject} from "./page/Createproject"
 import { Create } from "./page/Create.jsx";
+import {Project} from "./page/Project"
 
 export const Router = () => {
   const [data, setData] = useState([]);
@@ -49,6 +50,7 @@ export const Router = () => {
           <Route path="/classinformation" element={<Classinformation />}/>
           <Route path="/createProject" element={<CreateProject />}/>
           <Route path="/create" element={<Create />}/>
+          <Route path="/project" element={<Project />}/>
         </Routes>
       </BrowserRouter>
         </ul>

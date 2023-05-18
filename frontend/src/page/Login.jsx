@@ -8,7 +8,7 @@ export const Login = () => {
 
   const checkUser = () => {
     const user_info = localStorage.getItem("user_information");
-    if (user_info) navigate("/");
+    // if (user_info) navigate("/");
   };
 
   useEffect(() => {
@@ -42,9 +42,12 @@ export const Login = () => {
         setWrongm(true);
       } else {
         localStorage.setItem("user_information", JSON.stringify(response.data));
+        localStorage.setItem("seeing_profile", JSON.stringify(response.data));
+        // sessionStorage.setItem("use_information", JSON.stringify(response.data));
         // sessionStorage.setItem("use_information", JSON.stringify(response.data));
         setTokenn(response?.data);
         const myHeaders = new Headers();
+        navigate("/")
         // myHeaders.append("authorization", user);
       }
     });

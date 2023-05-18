@@ -79,3 +79,11 @@ form{
     color: white;
     background-color: green;
 } */
+
+.error{
+    font-weight: 300;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 150%;
+    margin: 0;
+}

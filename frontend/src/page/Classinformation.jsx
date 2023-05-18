@@ -7,9 +7,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export const Classinformation = () => {
+    const navigate = useNavigate();
     const class_inf = localStorage.getItem("class_information");
     const class_info = JSON.parse(class_inf)
-    const [username, setUsername] = useState("")
+    const [usernameInfo, setUserInfo] = useState("")
     const [members, setMembers] = useState("")
     const [projects, setProjects] = useState("")
     const [projectInfo, setProjectInfo] = useState()
@@ -20,7 +21,8 @@ export const Classinformation = () => {
           url: `https://fk-three.vercel.app/user/${class_info.admin}`,
           method: "GET",
         }).then((response) => {
-            setUsername(response.data.username);
+            localStorage.setItem("seeing_profile", JSON.stringify(response.data));
+          navigate("/profile")
         });
       }
 
@@ -41,16 +43,31 @@ export const Classinformation = () => {
             setProjects(response.data);
         });
       }
-
-      const setProjectInfotmation = () => {
-
+      const getUserInfo = async (user_id) => {
+        await axios({
+          url: `https://fk-three.vercel.app/user/${user_id}`,
+          method: "GET",
+        }).then((response) => {
+          localStorage.setItem("seeing_profile", JSON.stringify(response.data));
+          navigate("/profile")
+          window.location.reload(false)
+        });
       }
+      const Project_data = async (project_id) => {
+        await axios({
+          url: `https://fk-three.vercel.app/project/${project_id}`,
+          method: "GET",
+        }).then((response) => {
+            localStorage.setItem("project_information", JSON.stringify(response.data));
+            navigate("/project")
+            window.location.reload(false)
+        });
+      }
+
     useEffect( () => {
-        Admin();
         Members();
         Projects();
     }, []);
-    console.log(projects);
     return(
         <div className="ss">
             <Navbar/>
@@ -62,8 +79,10 @@ export const Classinformation = () => {
                             <div style={{color:"white",fontSize:"30px",marginLeft:"4%"}}>{class_info.classname}</div>
                             <Link to={"/addmember"} className="newmember" ></Link>
                         </div>
-                        <div className="downwhite">
-                            <div className="theirname"> Admin: {username}</div>
+                        <div 
+                        onClick={Admin}
+                        className="downwhite">
+                            <div className="theirname"> Admin: {class_info.admin_name}</div>
                             <div className="line"></div>
                             <div className="description">Ene classed zuvhun backend projects oruulah ba public bna shu </div>
                         </div>
@@ -79,7 +98,17 @@ export const Classinformation = () => {
                                         const number = i + 1
                                         const createdAt = userData.createdAt
                                         const since = createdAt.substring(0, 7)
-                                        return <Classes number={number}  name={userData.username} first={"member since"} second={since}/>
+                                        return <div 
+                                        onClick={() => {
+                                            getUserInfo(userData._id)
+                                          }}
+                                        className="classmm">
+                                        <div className="topmm">
+                                            <div className="numbermm">{number}</div>
+                                            <div className="classnamemm">{userData.username}</div>
+                                        </div>
+                                        <div className="classinformationmm">member since {since}</div>
+                                    </div>
                                 })
                             )}
                          </div>
@@ -92,7 +121,14 @@ export const Classinformation = () => {
                                     <div className="word">No projects yet ...</div>
                                 ) : (
                                     projects.map((userData) => {
-                                        return <Box2 img_url={userData.img_url} title={userData.title}/>
+                                        return <div  
+                                        onClick={() => {
+                                            Project_data(userData._id)
+                                          }}
+                                        className="Box2">
+                                        <img className="img" src={userData.img_url}/>
+                                        <h3 className="txt" style={{ marginTop:"3%"}}>{userData.title}</h3>
+                                    </div>
                                 })
                             )}
                          </div>

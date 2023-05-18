@@ -167,3 +167,11 @@ color: #112D48;
     border: 0;
     cursor: pointer;
 }
+
+.error{
+    font-weight: 300;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 150%;
+    margin: 0;
+}

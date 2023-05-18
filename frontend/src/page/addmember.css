@@ -1,0 +1,91 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.downsearch{
+    display: flex;
+    width: 1400px;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+}
+.input{
+    width: 50%;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 2%;
+    margin-top: 5%;
+    /* ene hesgiig zasna */
+}
+.borderh{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 60vh;
+    overflow: scroll;
+    border: 2px solid #55cd51;
+    margin-top: 3%;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.addnewmemberTITLE{
+    font-size: 40px;
+    color: rgb(68, 203, 68);
+    font-weight: 500;
+    margin-top: 10%;
+}
+.cn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+}
+.addmemrow{
+  display: flex;
+  flex-direction: row;
+}
+.cllk{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 132%;
+  height: 70px;
+  border:#999999 solid 1px;
+  border-radius: 5px;
+  margin-top: 2%;
+  padding-left: 6%;
+  text-align:center;
+}
+.iconplus{
+  background-image: url(../img/addiconplus.png);
+  width: 30px;
+  height:30px;
+  background-size: contain;
+  margin-right: 10%;
+}
+
+@media screen and (max-width:1400px){
+    .downsearch{
+      width: 1200px;
+    }
+  }
+
+  @media screen and (max-width:1200px){
+    .downsearch{
+      width: 1100px;
+    }
+  }
+  @media screen and (max-width:1100px){
+    .downsearch{
+      width: 1000px;
+    }
+  }
+
+

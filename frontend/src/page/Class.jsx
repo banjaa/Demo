@@ -32,6 +32,7 @@ export const Class = () => {
         method: "GET",
       }).then((response) => {
         localStorage.setItem("class_information", JSON.stringify(response.data));
+        window.location.reload(false)
       });
     }
   useEffect( () => {

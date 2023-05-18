@@ -67,18 +67,6 @@ export const Home = () => {
             </div>
 
             <div className="ani" style={{width:"100%", height:"1px", backgroundColor:"grey", marginTop:"3%"}}></div>
-            <div style={{width:"100%"}}>
-                <h2 className="ani" style={{marginTop:"8%", marginBottom:"1%", color:"grey"}}>Infographics</h2>
-            </div>
-            
-            <div className="Box1">
-                <Box2/>
-                <Box2/>
-                <Box2/>
-                <Box2/>
-                <Box2/>
-                <Box2/>
-            </div>
 
             <div className="ani" style={{width:"100%", display:"flex", justifyContent:"center"}}>
                 <button className="Button">

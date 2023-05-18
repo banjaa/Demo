@@ -4,13 +4,12 @@ import "./profile.css"
 import {Classes} from "../components/Classes"
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 
 export const Profile = () => {
     const [about, setAbout] = useState("")
-    const user = localStorage.getItem("user_information");
+    const user = localStorage.getItem("seeing_profile");
     const user_info = JSON.parse(user)
     const about_me = user_info.about
 
@@ -20,6 +19,7 @@ export const Profile = () => {
 
     const [data, setData] = useState("")
     const [projects, setpProjects] = useState("")
+    const [memberOf, setpMemberOf] = useState("")
     const navigate = useNavigate();
 
     const dataRetriever = async () => {
@@ -29,7 +29,6 @@ export const Profile = () => {
           method: "GET",
         }).then( async (response) => {
             setData(response.data.data)
-            console.log(response.data);
         });
       }
       const Class_data = async (class_id) => {
@@ -38,8 +37,11 @@ export const Profile = () => {
           method: "GET",
         }).then((response) => {
           localStorage.setItem("class_information", JSON.stringify(response.data));
+          navigate("/classinformation")
+          window.location.reload(false)
         });
       }
+
       const Projects = async () => {
         await axios({
           url: `https://fk-three.vercel.app/projectby_uid/${user_info._id}`,
@@ -48,9 +50,18 @@ export const Profile = () => {
           setpProjects(response.data);
         });
       }
+      const MemberOf = async () => {
+        await axios({
+          url: `https://fk-three.vercel.app/classby_member/${user_info._id}`,
+          method: "GET",
+        }).then((response) => {
+          setpMemberOf(response.data)
+        });
+      }
     useEffect( () => {
         dataRetriever();
         Projects();
+        MemberOf();
     }, []);
 
     return(
@@ -75,13 +86,18 @@ export const Profile = () => {
                                 ) : (
                                     data.map((userData, i) => {
                                         const number = i + 1
-                                        return <Classes 
+                                        return <div 
                                         onClick={() => {
                                             Class_data(userData._id)
                                           }}
-                                         name={userData.classname} project={userData.projects.length} number={number} first={userData.projects.length} second={"projects"}/>
+                                        className="classmm">
                                             
-                                        
+                                        <div className="topmm">
+                                            <div className="numbermm">{number}</div>
+                                                <div className="classnamemm">{userData.classname}</div>
+                                        </div>
+                                        <div className="classinformationmm">{userData.projects.length} projects</div>
+                                    </div>
                                         
                                 })
                             )}
@@ -89,13 +105,24 @@ export const Profile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="myprojects">MY PROJECTS.</div>
+                <div className="myprojects">MEMBER OF</div>
                 <div className="theirprojects">
-                                {projects.length === 0 ? (
-                                    <div className="word">No projects yet ...</div>
+                                {memberOf.length === 0 ? (
+                                    <div className="word">Not member yet ...</div>
                                 ) : (
-                                    projects.map((userData) => {
-                                        return <Box2 img_url={userData.img_url} title={userData.title}/>
+                                    memberOf.map((userData) => {
+                                        return <Link style={{textDecoration:"none"}} to={"/classinformation"}>
+                <div
+              onClick={() => {
+                Class_data(userData._id)
+              }}
+              className="classBox">
+              <div className="miniBox">
+                  <h2 className="title">{userData.classname}</h2>
+                  <h3 className="information"> {userData.members.length} members | {userData.projects.length} projects</h3>
+              </div>
+          </div>
+              </Link>
                                 })
                             )}
                          </div>
